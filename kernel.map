@@ -1,0 +1,89 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0 80200000     1 . = 0x80200000
+80200000 80200000       42     2 .text
+80200000 80200000        e     2         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.text.boot)
+80200000 80200000        0     1                 .L0 
+80200000 80200000        0     1                 .L0 
+80200000 80200000        0     1                 $x
+80200000 80200000        0     1                 .L0 
+80200000 80200000        e     1                 boot
+80200008 80200008        0     1                 .L0 
+8020000e 8020000e        0     1                 .L0 
+8020000e 8020000e        0     1                 .L0 
+8020000e 8020000e       34     2         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.text)
+8020000e 8020000e        0     1                 .L0 
+8020000e 8020000e        0     1                 .L0 
+8020000e 8020000e        0     1                 $x
+8020000e 8020000e        0     1                 .L0 
+8020000e 8020000e       10     1                 memset
+80200012 80200012        0     1                 .L0 
+80200018 80200018        0     1                 .L0 
+8020001c 8020001c        0     1                 .L0 
+8020001e 8020001e        0     1                 .L0 
+8020001e 8020001e        0     1                 .L0 
+8020001e 8020001e        0     1                 .L0 
+8020001e 8020001e       24     1                 main
+80200022 80200022        0     1                 .L0 
+80200026 80200026        0     1                 .L0 
+8020002a 8020002a        0     1                 .L0 
+8020002e 8020002e        0     1                 .L0 
+8020002e 8020002e        0     1                 .L0 
+80200032 80200032        0     1                 .L0 
+80200032 80200032        0     1                 .L0 
+80200034 80200034        0     1                 .L0 
+80200036 80200036        0     1                 .L0 
+8020003c 8020003c        0     1                 .L0 
+80200040 80200040        0     1                 .L0 
+80200040 80200040        0     1                 .L0 
+80200042 80200042        0     1                 .L0 
+80200042 80200042        0     1                 .L0 
+80200044 80200044        0     4 .bss
+80200044 80200044        0     1         __bss = .
+80200044 80200044        0     1         __bss_end = .
+80200044 80200044        0     1 . = ALIGN(4)
+80200044 80200044    20000     1 . += 128 * 1024
+80220044 80220044        0     1 __stack_top = .
+       0        0       50     1 .debug_loclists
+       0        0       50     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_loclists)
+       0        0        0     1                 $d
+       c        c        0     1                 .L0 
+       0        0       e4     1 .debug_abbrev
+       0        0       e4     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_abbrev)
+       0        0        0     1                 $d
+       0        0       d1     1 .debug_info
+       0        0       d1     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_info)
+       0        0        0     1                 $d
+       0        0       24     1 .debug_rnglists
+       0        0       24     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_rnglists)
+       0        0        0     1                 $d
+       c        c        0     1                 .L0 
+       0        0       38     1 .debug_str_offsets
+       0        0       38     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_str_offsets)
+       0        0        0     1                 $d
+       8        8        0     1                 .L0 
+       0        0       72     1 .debug_str
+       0        0       72     1         <internal>:(.debug_str)
+       0        0       14     1 .debug_addr
+       0        0       14     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_addr)
+       0        0        0     1                 $d
+       8        8        0     1                 .L0 
+       0        0       3b     1 .comment
+       0        0       3b     1         <internal>:(.comment)
+       0        0       4e     1 .riscv.attributes
+       0        0       4e     1         <internal>:(.riscv.attributes)
+       0        0       44     4 .debug_frame
+       0        0       44     4         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_frame)
+       0        0        0     1                 .L0 
+       0        0        0     1                 $d
+       0        0       d4     1 .debug_line
+       0        0       d4     1         /var/folders/96/s5k82x7d0f7976tj4gzyfr6r0000gn/T/kernel-3772ac.o:(.debug_line)
+       0        0        0     1                 .Lline_table_start0
+       0        0        0     1                 $d
+       0        0       25     1 .debug_line_str
+       0        0       25     1         <internal>:(.debug_line_str)
+       0        0      160     4 .symtab
+       0        0      160     4         <internal>:(.symtab)
+       0        0       ce     1 .shstrtab
+       0        0       ce     1         <internal>:(.shstrtab)
+       0        0       61     1 .strtab
+       0        0       61     1         <internal>:(.strtab)
