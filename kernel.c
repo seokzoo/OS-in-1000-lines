@@ -1,7 +1,7 @@
 #include "common.h"
 #include "kernel.h"
 
-extern char __bss[], __bss_end[], __stack_top[];
+extern char __bss[], __bss_end[], __stack_top[], __free_ram[], __free_ram_end[];
 
 __attribute__((naked))
 __attribute__((aligned(4)))
@@ -113,18 +113,28 @@ void putchar(char ch)
     sbi_call(ch, 0, 0, 0, 0, 0, 0, 1); 
 }
 
+paddr_t allocate_pages(uint32_t n)
+{
+    static paddr_t next_paddr = (paddr_t) __free_ram;
+    paddr_t r = next_paddr;
+    next_paddr += (paddr_t) n * PAGE_SIZE;
+
+    if (next_paddr > (paddr_t) __free_ram_end)
+        PANIC("out of memory!");
+    memset((char *)r, (char)NULL, (unsigned int)n * PAGE_SIZE);
+    return r;
+}
+
 void main(void) 
 {
     memset((char *)__bss, 0, (__bss_end - __bss));
+    paddr_t paddr1 = allocate_pages(2);
+    paddr_t paddr2 = allocate_pages(1);
 
-    printf("%d + %d\n = %d\n", 3, 4, 3+4);
+    printf("paddr1 = %x\n", paddr1);
+    printf("paddr2 = %x\n", paddr2);
 
-    WRITE_CSR(stvec, (uint32_t) kernel_entry);
-    __asm__ __volatile__("unimp");
-    
-    while(1) {
-        __asm__ __volatile("wfi");
-    }
+    PANIC("booted");
 }
 
 __attribute__((section(".text.boot")))

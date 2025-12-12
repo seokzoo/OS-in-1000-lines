@@ -20,6 +20,8 @@ typedef uint32_t vaddr_t;
 #define va_end   __builtin_va_end
 #define va_arg   __builtin_va_arg
 
+#define PAGE_SIZE 4096
+
 void printf(const char *fmt, ...);
 void *memset(char *begin, char c, unsigned int n);
 void *memcpy(void *dst, const void *src, size_t n);
